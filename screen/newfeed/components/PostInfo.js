@@ -11,18 +11,22 @@ const PostInfo = () => {
             dataFeeds.map((value, index) => (
                 <View key={index}>
                     <View  style={styles.container_post__header}>
-                    <Image source={value.image} style={styles.avatar} />
-                    <View >
-                        <Text style={styles.post_title}>{`${value.title}`}</Text>
+                        <Image source={value.image} style={styles.avatar} />
+                        <View >
+                            <Text style={styles.post_title}>{`${value.title}`}</Text>
 
-                        <View style={styles.post_subInfo}>
-                            <Text style={styles.post_subInfo__text} >{`${value.name}`} </Text>
-                            <Text style={styles.post_subInfo__text} >{`${value.time}`} </Text>
+                            <View style={styles.post_subInfo}>
+                                <Text style={styles.post_subInfo__text} >{`${value.name}`} </Text>
+                                <Text style={styles.post_subInfo__text} >{`${value.time}`} </Text>
+                            </View>
+
                         </View>
+                        <TouchableOpacity style={styles.post__header_icon} >
+                            <FontAwesomeIcon icon={faEllipsisH} />
+                        </TouchableOpacity>
 
-                    </View>
-                    <FontAwesomeIcon icon={faEllipsisH} style={styles.post__header_icon} />
-                    </View>
+                   
+                   </View>
 
                     <View>
                         <Text style={styles.post_content__text}>{`${value.content}`}</Text>
@@ -55,28 +59,31 @@ const styles = StyleSheet.create({
         backgroundColor: '#FFF'
     },
     container_post__header: {
-        flexDirection: 'row'
+        flexDirection: 'row',
+        justifyContent: 'space-between'
     },
     post_title: {
-        marginTop: 5,
+        marginTop: 8,
         color: "#000",
-        fontWeight: '400'
+        fontWeight: '400',
+        right: 40
     },
     post_subInfo: {
         flexDirection: 'row',
-        justifyContent: 'space-between'
+        justifyContent: 'space-between',
+        right: 40
     },
     post_subInfo__text: {
         color: 'gray',
         fontWeight: '300'
     },
     post_content__text: {
+        fontSize: 16,
         color: 'black',
         paddingLeft: 10,
         paddingRight: 10  
     },
     post__header_icon: {
-        left: 80,
         margin: 10
     },
     avatar: {
@@ -103,7 +110,8 @@ const styles = StyleSheet.create({
     },
     post_footer_stat: {
         color: 'black',
-        fontWeight: '500',
+        fontSize: 16,
+        fontWeight: '400',
         marginRight: 10,
         alignSelf: 'center'
     }

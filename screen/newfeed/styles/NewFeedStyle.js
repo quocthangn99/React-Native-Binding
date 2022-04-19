@@ -18,14 +18,17 @@ export default styles = StyleSheet.create({
         justifyContent: "space-between"
     },
     header__text: {
-        fontSize: 16,
-        fontWeight: 'bold',
+        fontSize: 18,
+        fontWeight: '500',
         color: "#000"
     },
     container_avatar: {
         height: 90,
         marginTop: 1,
         backgroundColor:"#FFF"
+    },
+    container_avatar__name: {
+        color: '#000'
     },
     container_avatar__image: {
         height: 56,

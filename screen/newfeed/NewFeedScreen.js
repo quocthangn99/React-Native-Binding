@@ -28,7 +28,7 @@ export class NewFeedScreen extends Component {
               dataAvatar.map((value, index) => (
                 <View key={index} style={NewFeedStyle.container_avatar__sub}>
                   <Image source={value.image} resizeMode={'cover'} style={NewFeedStyle.container_avatar__image}/>
-                  <Text> {`${value.name}`} </Text>
+                  <Text style={NewFeedStyle.container_avatar__name}> {`${value.name}`} </Text>
                 </View>
               ))
             }
