@@ -3,7 +3,7 @@ import {StyleSheet, Platform} from 'react-native';
 export default styles = StyleSheet.create({
     root: {
         flex:1,
-        backgroundColor: '#E9BEE'
+        backgroundColor: '#E9EBEE'
     },
     container_header: {
         backgroundColor:"#FFF",
@@ -16,5 +16,24 @@ export default styles = StyleSheet.create({
         backgroundColor: "#FFF",
         flexDirection: 'row',
         justifyContent: "space-between"
+    },
+    header__text: {
+        fontSize: 16,
+        fontWeight: 'bold',
+        color: "#000"
+    },
+    container_avatar: {
+        height: 90,
+        marginTop: 1,
+        backgroundColor:"#FFF"
+    },
+    container_avatar__image: {
+        height: 56,
+        width: 56,
+        borderRadius: 28
+    },
+    container_avatar__sub: {
+        alignItems: 'center',
+        margin: 10
     }
 })
